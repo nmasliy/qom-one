@@ -1,0 +1,28 @@
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: -8px;
+
+  li {
+    margin: 8px;
+    transition: $transition;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  a {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .socials {
+    li img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
