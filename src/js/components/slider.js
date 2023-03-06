@@ -6,8 +6,8 @@ function initImagesSlider() {
   const swiper = new Swiper('.images__slider', {
     slidesPerView: 3,
     spaceBetween: 85,
-    initialSlide: 3,
     centeredSlides: true,
+    loop: true,
     breakpoints: {
       // when window width is >= 320
       320: {
@@ -31,7 +31,13 @@ function initImagesSlider() {
 
   slides.forEach((el) => {
     el.addEventListener('click', () => {
-      swiper.slideTo(swiper.clickedIndex);
+      if (swiper.clickedIndex === swiper.activeIndex) return;
+
+      if (swiper.activeIndex < swiper.clickedIndex) {
+        swiper.slideNext();
+      } else {
+        swiper.slidePrev();
+      }
     });
   });
 }

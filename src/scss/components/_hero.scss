@@ -62,21 +62,50 @@
 
 @media screen and (max-width: 768px) {
   .hero {
-    padding-top: 300px;
+    padding-top: 350px;
+
+    &__title {
+      margin-bottom: 10px;
+    }
 
     &__content {
       &::before {
-        left: -130px;
-        width: 458px;
-        height: 214px;
+        left: -10px;
+        bottom: 122%;
+        width: 365px;
+        height: 170px;
       }
 
       &::after {
-        left: 0;
         right: 0;
-        margin: 0 auto;
-        width: 316px;
-        height: 209px;
+        top: auto;
+        bottom: 27%;
+        width: 200px;
+        height: 192px;
+        background-image: url("../img/hero-2-mobile.png");
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .hero {
+    padding-top: 220px;
+
+    &__content {
+      padding: 37px 15px;
+
+      &::before {
+        left: -10px;
+        bottom: 170px;
+        width: 230px;
+        height: 108px;
+      }
+
+      &::after {
+        bottom: 50px;
+        width: 125px;
+        height: 122px;
       }
     }
   }
